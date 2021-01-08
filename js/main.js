@@ -68,10 +68,14 @@ $(document).ready(() => {
     });
 
     $('#main').mousemove(function (e){
-        $('focus').addClass('open')
+        $('#focus').css({
+            display: "block",
+        })
     });
     $('#main').mouseout(function (e){
-        $('focus').removeClass('open')
+        $('#focus').css({
+            display: "none",
+        })
     });
 
 
