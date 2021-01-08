@@ -12,7 +12,7 @@ exports.less = function () {
         .pipe(concatCss("main.css"))
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(dest('./dist/css'));
+        .pipe(dest('./css'));
 };
 
 exports.lessWatch = function () {
