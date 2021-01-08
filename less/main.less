@@ -1,0 +1,257 @@
+@font-face {
+  src: url("../dist/fonts/GT-America-Bold.otf");
+  font-family: GT-America;
+}
+
+@font-face {
+  src: url("../dist/fonts/TTTravels-Regular.ttf");
+  font-family: TT Travels;
+}
+@font-face {
+  src: url("../dist/fonts/Schnyder_X_Cond_XL_Demi.otf");
+  font-family: Schnyder Cond XL Demi;
+}
+
+
+body {
+  margin: 0;
+  cursor: url("../dist/images/Ellipse 3.png"), default;
+}
+
+#header {
+  max-width: 1345px;
+  margin:0 auto;
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  #vector {
+    top: 2px;
+    position: absolute;
+    left: 400px;
+    z-index: -99;
+  }
+
+  #logo {
+    font-family: "GT-America", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -1px;
+    color: #000000;
+  }
+  #burger {
+    display: none;
+  }
+  #menu.open {
+    display: flex;
+    z-index: 9999;
+  }
+  #menu {
+
+    #menu-cancel {
+      display: none;
+      position: absolute;
+      top: 27px;
+      right: 27px;
+    }
+    ul {
+      margin: 0;
+      text-align: right;
+
+      li {
+        list-style-type: none;
+        font-family: "TT Travels", sans-serif;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: #000000;
+        margin: 6px 0;
+      }
+    }
+  }
+}
+#main {
+  height: 675px;
+  position: relative;
+
+  #focus {
+    opacity: 0;
+    position: absolute;
+    font-family: "TT Travels",sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    display: none;
+  }
+  #focus.open{
+    display: block;
+  }
+  .swiper-container {
+    top: 32%;
+    z-index: 999;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        font-family: "Schnyder Cond XL Demi",sans-serif;
+        font-size: 125.581px;
+        text-transform: uppercase;
+        mix-blend-mode: darken;
+        color: rgba(88, 3, 0, 0);
+      }
+      .swiper-slide.swiper-slide-active {
+        font-size: 125.581px;
+        text-transform: uppercase;
+        color: rgba(88, 3, 0, 0.7);
+        -webkit-text-stroke: 1px rgba(88, 3, 0, 0.7);
+        mix-blend-mode: darken;
+        left: -50px;
+
+
+      }
+      .swiper-slide.swiper-slide-next {
+        color: rgba(88, 3, 0, 0);
+        -webkit-text-stroke: 1px #580300;
+        transform: rotate(1.5deg);
+        right: -20px;
+      }
+      .swiper-slide.swiper-slide-prev {
+        left: 57px;
+        color: rgba(88, 3, 0, 0);
+        -webkit-text-stroke: 1px #580300;
+        transform: rotate(-1.5deg);
+      }
+    }
+  }
+
+  #left-image {
+    z-index: -1;
+    width: 238px;
+    height: 331px;
+    position: absolute;
+    left: 200px;
+    transform: rotate(1.5deg);
+    top: 77px;
+    overflow: hidden;
+
+    #parallax-left-image {
+      background: url("../dist/images/image2.png") no-repeat top;
+      transform: rotate(1.5deg);
+      background-size: 530px;
+      width: 145%;
+      height: 134%;
+      transition: all 0.5s ease;
+      position: absolute;
+    }
+  }
+
+  #main-image {
+    width: 476px;
+    height: 702px;
+    transform: rotate(1.5deg);
+    position: absolute;
+    top: -50px;
+    left: 456px;
+    z-index: -2;
+    overflow: hidden;
+    #parallax-main-image {
+      background: url("../dist/images/image1.png") no-repeat top;
+      transform: rotate(1.5deg);
+      background-size: 600px;
+      width: 123%;
+      height: 120%;
+      transition: all 0.5s ease;
+      position: absolute;
+    }
+  }
+
+  #right-image {
+    width: 345px;
+    height: 238px;
+    position: absolute;
+    right: 191px;
+    transform: rotate(1.5deg);
+    top: 377px;
+    z-index: -1;
+    overflow: hidden;
+    #parallax-right-image {
+      background: url("../dist/images/image3.png") no-repeat center;
+      transform: rotate(1.5deg);
+      background-size: 430px;
+      width: 123%;
+      height: 120%;
+      transition: all 0.5s ease;
+      position: absolute;
+    }
+  }
+}
+
+
+#footer {
+  max-width: 1345px;
+  margin: 0 auto;
+  padding: 13px 0 21px 0;
+  display: flex;
+  align-items: flex-start;
+  cursor: url("../dist/images/Ellipse 3.png"), default;
+
+  #insta-logo-container:hover #insta-logo {
+    opacity: 1;
+    transform: translate(0,-50px);
+  }
+  #fb-container:hover #fb-logo {
+    opacity: 1;
+    transform: translate(0,-50px);
+  }
+  #insta-logo-container {
+    display: flex;
+    flex-direction: column;
+    #insta-text {
+      margin-top: 6px;
+
+    }
+    #insta-logo {
+      opacity: 0;
+      transition-duration: 700ms;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  #fb-container {
+
+    display: flex;
+    flex-direction: column;
+    #fb-text {
+      margin-top: 6px;
+    }
+    #fb-logo {
+      opacity: 0;
+      transition-duration: 700ms;
+      svg{
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  a {
+    font-family: "TT Travels", sans-serif;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    text-decoration: none;
+    cursor: url("../dist/images/Ellipse 3.png"), default;
+  }
+
+  span {
+    margin: 0 8px;
+  }
+}
+
+@import "adaptive";
